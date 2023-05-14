@@ -55,15 +55,17 @@ class _TodoListPageState extends State<TodoListPage> {
                 ],
               ),
               SizedBox(height: 20),
-              ListView(
-                shrinkWrap: true,
-                children: [
-                  for (String todo in todos)
-                    ListTile(
-                      title: Text('$todo'),
-                      subtitle: Text('20/11/2023'),
-                    ),
-                ],
+              Flexible(
+                child: ListView(
+                  shrinkWrap: true,
+                  children: [
+                    for (String todo in todos)
+                      ListTile(
+                        title: Text('$todo'),
+                        subtitle: Text('20/11/2023'),
+                      ),
+                  ],
+                ),
               ),
               SizedBox(height: 20),
               Row(
