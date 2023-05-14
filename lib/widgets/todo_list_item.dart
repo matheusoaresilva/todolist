@@ -20,7 +20,7 @@ class TodoListItem extends StatelessWidget {
           margin: const EdgeInsets.symmetric(vertical: 4),
           padding: EdgeInsets.all(16),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
                 DateFormat('dd/MM/yyyy - EE - HH:mm').format(todo.dateTime),
@@ -35,7 +35,8 @@ class TodoListItem extends StatelessWidget {
             ],
           ),
         ),
-        actionPane: const SlidableDrawerActionPane(),
+        actionExtentRatio: 0.25, // tamanho que vai utilizar da largura
+        actionPane: const SlidableStrechActionPane(),
         
         secondaryActions: [
           IconSlideAction(
